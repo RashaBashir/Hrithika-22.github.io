@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blueberry</title>
+   <!--Header-->
+    <div class="header">
+      <p><h1><center>FOOD MART</center></h1></p>
+    </div>
+
+<style>
+
+.header {
+  padding: 10px;
+  text-align: center;
+  background: lightgray;
+  color: black;
+  font-size: 12.5px;
+  margin-top: 0%;
+}
+
+/* Menu customization*/
+
+/* Nav menu */
+.navbar {
+  overflow: hidden;
+  background-color: grey;
+}
+
+/* Nav links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Subnav menu */
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Hover Nav Color */
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: lightgray;
+}
+
+/* Style subnav + position */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: grey;
+  width: 100%;
+  z-index: 1;
+}
+
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+/*Hover Color 4 Subnav */
+.subnav-content a:hover {
+  background-color: lightgrey;
+  /* text*/
+  color: white;
+}
+
+/* Open subnav when hover */
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+/* Table customizaiton*/    
+    table {
+        table-layout: fixed;
+        width: 50%;
+        margin-top: 1%;
+        margin-left: 25%;
+      }
+    td {
+        width: 25%;
+      }
+    th, td {
+       border-style: dashed;
+       border-color: grey;
+       height: 560px;
+    }
+</style>
+</head>
+
+<body>  
+
+    <!--Menu bar-->
+
+    <div class="navbar">
+      <a href="http://127.0.0.1:5500/index.html">Home</a>
+      <div class="subnav">
+        <button class="subnavbtn"><a href="http://127.0.0.1:5500/fruitsh.html"></a>Fruits <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="http://127.0.0.1:5500/banana.html">Banana</a>
+          <a href="http://127.0.0.1:5500/peach.html">Peach</a>
+          <a href="http://127.0.0.1:5500/strawberry.html">Strawberry</a>
+          <a href="http://127.0.0.1:5500/kiwi.html">Kiwi</a>
+          <a href="http://127.0.0.1:5500/blueberry.html">Blueberry</a>
+  
+        </div>
+      </div>
+      <div class="subnav">
+        <button class="subnavbtn"><a href="http://127.0.0.1:5500/vegtableh.html"></a>Vegetables <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="http://127.0.0.1:5500/lettuce.html">Lettuce</a>
+          <a href="http://127.0.0.1:5500/tomato.html">Tomato</a>
+          <a href="http://127.0.0.1:5500/cucumber.html">Cucumber</a>
+          <a href="http://127.0.0.1:5500/lemon.html">Lemon</a>
+          <a href="http://127.0.0.1:5500/parsley.html">Flat Parsley</a>
+        </div>
+      </div>
+      <div class="subnav">
+        <button class="subnavbtn"><a href="http://127.0.0.1:5500/meath.html"></a>Meat <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="http://127.0.0.1:5500/lamb.html">Lamb</a>
+          <a href="http://127.0.0.1:5500/prawns.html">Prawns</a>
+          <a href="http://127.0.0.1:5500/crab.html">Crab</a>
+          <a href="http://127.0.0.1:5500/fish.html">Fish</a>
+          <a href="http://127.0.0.1:5500/chicken.html">Chicken</a>
+        </div>
+      </div>
+      <div class="subnav">
+        <button class="subnavbtn"><a href="http://127.0.0.1:5500/dairyh2.html"></a>Dairy <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="http://127.0.0.1:5500/butter.html">Butter</a>
+          <a href="http://127.0.0.1:5500/milk.html">Milk</a>
+          <a href="http://127.0.0.1:5500/kraft.html">Kraft Cheese</a>
+          <a href="http://127.0.0.1:5500/cream_cheese.html">Philadelphia Cream Cheese</a>
+          <a href="http://127.0.0.1:5500/eggs.html">Burnbrae Eggs</a>
+        </div>
+      </div>
+  
+  
+        <div class="subnav">
+          <button class="subnavbtn"><a href="http://127.0.0.1:5500/drinks.html"></a>Drinks <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="http://127.0.0.1:5500/coke.html">Coca-Cola</a>
+            <a href="http://127.0.0.1:5500/fanta.html">Fanta</a>
+            <a href="http://127.0.0.1:5500/juice.html">Orange Juice</a>
+            <a href="http://127.0.0.1:5500/yop.html">Yop</a>
+            <a href="http://127.0.0.1:5500/redbull.html">Red-Bull</a>
+          </div>
+        </div>
+
+    <a href="http://127.0.0.1:5500/shopping-cart%20soen.html">View Cart</a>
+    <div class="subnav-content">
+    <a href="#cart"></a>
+    </div>
+
+    <a href="http://127.0.0.1:5500/login.html">Log In</a>
+    <div class="subnav-content">
+    <a href="#LogIn"></a>
+    </div>
+
+    <a href="http://127.0.0.1:5500/signup.html">Sign Up</a>
+    <div class="subnav-content">
+    <a href="#SignUp"></a>
+    </div>
+  </div>
+
+<table>
+    <th>
+        <div>
+          <img src="blueberry soen.jpg" alt="blueberry" width="60%" height="60%">
+          <h2>Blueberry</h2>
+          <div class=" product-description">
+            <details class="des">
+              <summary>Product description</summary>
+                  <p>
+                    <ul>
+                        <li class=" Available-store">In Stock </li>
+                        <li class = " Origin">Product of Canada </li>
+                        <li class="Available">Available all year around </li>
+                        <li class= " Category">Type: Fruit </li>
+                        <li class= "price">Price "1.99 $/box" </li>
+            
+                       </ul>
+                     </p>
+                    </div>
+                    </details >
+          <input type="number" id="quantity" name="quantity"
+                min="1" max="100">
+          <button>Add to Cart</button>
+        </div>
+      </th>  
+  </table>
+
+</body>
+</html>
