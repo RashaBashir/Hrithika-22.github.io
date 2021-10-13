@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Backstore - Add or edit a product</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+      [class*="col-"] {
+        float: left;
+        padding: 15px;
+      }
+
+      /* For mobile phones: */
+      [class*="col-"] {
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 750px) {
+        .navbar-phone {text-align: center;}
+        .content-phone {padding: 5px;}
+        .topContent-phone {margin-top: 10px;}
+      }
+
+      @media only screen and (min-width: 750px) {
+        /* For tablets: */
+        .col-s-1 {width: 8.33%;}
+        .col-s-2 {width: 16.66%;}
+        .col-s-3 {width: 25%;}
+        .col-s-4 {width: 33.33%;}
+        .col-s-5 {width: 41.66%;}
+        .col-s-6 {width: 50%;}
+        .col-s-7 {width: 58.33%;}
+        .col-s-8 {width: 66.66%;}
+        .col-s-9 {width: 75%;}
+        .col-s-10 {width: 83.33%;}
+        .col-s-11 {width: 91.66%;}
+        .col-s-12 {width: 100%;}
+
+        .content-tablet {
+          margin-left: 15%;
+          padding-left: 15px;
+        }
+
+        .col-navbar-tablet {width: 15%;}
+        .topContent-tablet {margin-top: 100px;}
+      }
+
+      @media only screen and (min-width: 968px) {
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        .content-desktop {
+          margin-left: 15%;
+          padding-left: 15px;
+        }
+
+        .col-navbar-desktop {width: 15%;}
+        .topContent-desktop {margin-top: 100px;}
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #254441;
+      }
+
+      .logo {
+	      padding: 0 30px;
+	      font-size: 20px;
+	      line-height: 35px;
+        color: white;
+      }
+
+      .navbar {
+        margin-top: 90px;
+      }
+
+      .navbarInner ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .navbarInner li {
+        background-color: rgb(14, 149, 226);
+        padding: 5px;
+        margin-bottom: 5px;
+      }
+
+      .navbarInner a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .contentForm {
+        border: 1px solid gray;
+        background-color: #dddddd;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .spacing {
+        width: 100%;
+        clear: both;
+        height: 10px;
+      }
+
+      .footer {
+        background-color: white;
+        padding: 20px 0 20px;
+        text-align: center;
+      }
+      .btn {
+        background: rgb(14, 149, 226);
+        background-image: -webkit-linear-gradient(top, rgb(14, 149, 226), #2980b9);
+        background-image: -moz-linear-gradient(top, rgb(14, 149, 226), #2980b9);
+        background-image: -ms-linear-gradient(top, rgb(14, 149, 226), #2980b9);
+        background-image: -o-linear-gradient(top, rgb(14, 149, 226), #2980b9);
+        background-image: linear-gradient(to bottom, rgb(14, 149, 226), #2980b9);
+        -webkit-border-radius: 13;
+        -moz-border-radius: 13;
+        border-radius: 13px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 12px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border: 0;
+      }
+      .btn:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #7a0ef5);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #7a0ef5);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #7a0ef5);
+        background-image: -o-linear-gradient(top, #3cb0fd, #7a0ef5);
+        background-image: linear-gradient(to bottom, #3cb0fd, #7a0ef5);
+        text-decoration: none;
+      }
+      .footer {
+        background-color: #254441;
+        padding: 20px 0 20px;
+        text-align: center;
+      }
+      .ppp {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        margin-top:0;
+        color: white;
+      }
+      .footer-link{
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        margin: 10px 20px;
+        text-decoration: none;
+      }
+      .footer-link:hover{
+        color: black;
+      }
+      .save{
+        margin-left:50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <p>Food World</p>
+      </div>
+    </div>
+    <div class="navAndContent">
+      <div class="navbar navbar-phone col-navbar-tablet col-navbar-desktop">
+        <div class="navbarInner">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <br><br>
+            <b>Backstore</b>
+            <li><a href="backstore_p7.html">Products</a></li>
+            <li><a href="backstore_p11.html">Orders</a></li>
+            <li><a href="userpage.html">Users</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-desktop content-tablet content-phone">
+        <div class="topContent-phone topContent-tablet topContent-desktop">
+          <h1>Backstore</h1>
+          <p><b>Add or edit a product</b><br>This section of the backstore allows you to add or edit one of the order listings.</p>
+        </div>
+        <div class="contentForm col-9 col-s-9">
+          <form>
+            <label for="name">Name of product:</label>
+            <input type="text" id=name name="name"><br><br>
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" name="brand"><br><br>
+            <label for="origin">Origin:</label>
+            <input type="text" id="origin" name="origin"><br><br>
+            <label for="weight">Weight(mL):</label>
+            <input type="text" id="weight" name="weight"><br><br>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category"><br><br>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price"><br><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+            <input class = "btn save" type="submit" value="Save">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="spacing"></div>
+    <div class="footer">
+      <p class="ppp">Contact us!</p>
+      <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+      <a class="footer-link" href="https://twitter.com/">Twitter</a>
+      <a class="footer-link" href="https://www.w3schools.com/">Website</a>
+    </div>
+  </body>
+</html>

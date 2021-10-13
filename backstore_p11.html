@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Backstore - Products list</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+      [class*="col-"] {
+        float: left;
+        padding: 15px;
+      }
+
+      /* For mobile phones: */
+      [class*="col-"] {
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 750px) {
+        .navbar-phone {text-align: center;}
+        .content-phone {padding: 5px;}
+        .topContent-phone {margin-top: 10px;}
+      }
+
+      @media only screen and (min-width: 750px) {
+        /* For tablets: */
+        .col-s-1 {width: 8.33%;}
+        .col-s-2 {width: 16.66%;}
+        .col-s-3 {width: 25%;}
+        .col-s-4 {width: 33.33%;}
+        .col-s-5 {width: 41.66%;}
+        .col-s-6 {width: 50%;}
+        .col-s-7 {width: 58.33%;}
+        .col-s-8 {width: 66.66%;}
+        .col-s-9 {width: 75%;}
+        .col-s-10 {width: 83.33%;}
+        .col-s-11 {width: 91.66%;}
+        .col-s-12 {width: 100%;}
+
+        .content-tablet {
+          margin-left: 15%;
+          padding-left: 15px;
+        }
+
+        .col-navbar-tablet {width: 15%;}
+        .topContent-tablet {margin-top: 100px;}
+      }
+
+      @media only screen and (min-width: 968px) {
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        .content-desktop {
+          margin-left: 15%;
+          padding-left: 15px;
+        }
+
+        .col-navbar-desktop {width: 15%;}
+        .topContent-desktop {margin-top: 100px;}
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #254441;
+      }
+
+      .logo {
+	      padding: 0 30px;
+	      font-size: 20px;
+	      line-height: 35px;
+        color: white;
+      }
+
+      .navbar {
+        margin-top: 90px;
+      }
+
+      .navbarInner ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .navbarInner li {
+        background-color: rgb(14, 149, 226);
+        padding: 5px;
+        margin-bottom: 5px;
+      }
+
+      .navbarInner a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .productButtons a {
+        text-decoration: none;
+      }
+
+      .productButtons button {
+        color: white;
+        background-color: #555555;
+        border: none;
+        padding: 3px 6px;
+        margin: 0 1px;
+      }
+
+      .data {
+        border: 1px solid gray;
+        padding: 15px;
+        float: left;
+        padding-top: 0px;
+      }
+
+      .entry {
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        float: left;
+        width: 100%;
+      }
+
+      .image {
+        width: 20%;
+        float: left;
+      }
+
+      .image img {
+        width: 100%;
+        height: 100%;
+        padding: 10%;
+      }
+
+      .list {
+        width: 60%;
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        word-wrap: break-word;
+      }
+
+      .list h1 {
+        font-size: 20px;
+      }
+
+      .amount {
+        width: 20%;
+        float: left;
+        text-align: center;
+      }
+
+      .spacing {
+        width: 100%;
+        clear: both;
+        height: 10px;
+      }
+
+      .footer {
+        background-color: #254441;
+        padding: 20px 0 20px;
+        text-align: center;
+      }
+      .itemB{
+        width: 100%;
+        height: 50px;
+        background-color: #d7d8d9;
+      }
+      .Item{
+        margin-top: 15px;
+        width: 10%;
+        height: 20px;
+        background-color: #d7d8d9;
+        position: absolute;
+
+      }
+      .Qty{
+        margin-top: 15px;
+        width: 10%;
+        height: 20px;
+        background-color: #d7d8d9;
+        position: absolute;
+        margin-left: 62%;
+      }
+      .pp{
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .btn {
+        background: rgb(14, 149, 226);
+        background-image: -webkit-linear-gradient(top, rgb(14, 149, 226), #2980b9);
+        background-image: -moz-linear-gradient(top, rgb(14, 149, 226), #2980b9);
+        background-image: -ms-linear-gradient(top, rgb(14, 149, 226), #2980b9);
+        background-image: -o-linear-gradient(top, rgb(14, 149, 226), #2980b9);
+        background-image: linear-gradient(to bottom, rgb(14, 149, 226), #2980b9);
+        -webkit-border-radius: 13;
+        -moz-border-radius: 13;
+        border-radius: 13px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 12px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border: 0;
+        margin-top:65%;
+        margin-left: 20px;
+      }
+      .btn:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #7a0ef5);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #7a0ef5);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #7a0ef5);
+        background-image: -o-linear-gradient(top, #3cb0fd, #7a0ef5);
+        background-image: linear-gradient(to bottom, #3cb0fd, #7a0ef5);
+        text-decoration: none;
+      }
+      .ppp {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        color: white;
+      }
+      .footer-link{
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        margin: 10px 20px;
+        text-decoration: none;
+      }
+      .footer-link:hover{
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <p>Food World</p>
+      </div>
+    </div>
+    <div class="navAndContent">
+      <div class="navbar navbar-phone col-navbar-tablet col-navbar-desktop">
+        <div class="navbarInner">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <br><br>
+            <b>Backstore</b>
+            <li><a href="backstore_p7.html">Products</a></li>
+            <li><a href="backstore_p11.html">Orders</a></li>
+            <li><a href="userpage.html">Users</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-desktop content-tablet content-phone">
+        <div class="topContent-phone topContent-tablet topContent-desktop">
+          <h1>Backstore</h1>
+          <p><b>List of products</b><br>This section of the backstore allows you to add, edit, or delete some of the order listings.</p>
+        </div>
+        <div class="productButtons">
+          <button class="btn"type="button">Add</button>
+        </div>
+        <br>
+        <div class="data col-11 col-s-11">
+          <div class="itemB">
+            <div class="Item">
+              <p class="pp">Item</p>
+            </div>
+            <div class="Qty">
+              <p class="pp">Qty</p>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="image">
+              <img src="https://images.unsplash.com/photo-1629019416996-712aa1bd87f4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGVwc2l8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Coca cola">
+            </div>
+            <div class="list">
+              <h1>Classic coke soft drink</h1>
+              <p>Brand: Coca Cola</p>
+              <p>Category: Drink</p>
+            </div>
+            <div class="amount">
+              <p>5</p>
+              <a href="backstore_p12.html">
+                <button class ="btn" type="button">Edit</button>
+              </a>
+              <a href="backstore_p12.html">
+                <button class ="btn" type="button">Delete</button>
+              </a>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="image">
+              <img src="https://images.unsplash.com/photo-1624517452488-04869289c4ca?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFudGF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Fanta">
+            </div>
+            <div class="list">
+              <h1>Zero sugar</h1>
+              <p>Brand: Fanta</p>
+              <p>Category: Drink</p>
+            </div>
+            <div class="amount">
+              <p>3</p>
+              <a href="backstore_p12.html">
+                <button class ="btn" type="button">Edit</button>
+              </a>
+              <a href="backstore_p12.html">
+                <button class ="btn" type="button">Delete</button>
+              </a>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="image">
+              <img src="https://images.unsplash.com/photo-1599360889420-da1afaba9edc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGFwcGxlJTIwanVpY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Orange juice">
+            </div>
+            <div class="list">
+              <h1>Made with orange sans-flavour artificial</h1>
+              <p>Brand: Orange juice</p>
+              <p>Category: Drink</p>
+            </div>
+            <div class="amount">
+              <p>10</p>
+              <a href="backstore_p12.html">
+                <button class ="btn" type="button">Edit</button>
+              </a>
+              <a href="backstore_p12.html">
+                <button class ="btn" type="button">Delete</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spacing"></div>
+    <div class="footer">
+      <p class="ppp">Contact us!</p>
+      <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+      <a class="footer-link" href="https://twitter.com/">Twitter</a>
+      <a class="footer-link" href="https://www.w3schools.com/">Website</a>
+    </div>
+  </body>
+</html>
