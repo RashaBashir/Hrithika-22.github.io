@@ -6,7 +6,21 @@
     <div class="header">
       <p><h1><center>FOOD MART</center></h1></p>
     </div>
-    
+    <script>
+        function moredescrip(){
+            var more =document.getElementById('myDiv');
+            var mybtn = document.getElementById('more-text')
+            if(myDiv.style.display =='none'){
+        myDiv.style.display='inline';
+        more-text.style.display=='none';
+        mybtn.innerHTML='more-text'
+        
+            }else{
+                myDiv.style.display='none';
+                more-text.style.display=='inline';
+                mybtn.innerHTML='more-text'
+            }
+        } </script>
 <script>
         function moredescrip(){
             var more =document.getElementById('myDiv');
@@ -123,6 +137,10 @@
             display: none;
 
         }
+     .detailed-des{
+            display: none;
+
+        }
 </style>
 </head>
 
@@ -210,19 +228,20 @@
         <div>
           <img src="cucumber soen pic.jpg" alt="cucumber" width="60%" height="60%">
           <h2>Cucumber</h2>
-          <div class=" product-description">
-            <details class="des">
-              <summary>Product description</summary>
-                  <p>
+         
+            <div class=" product-description">
+    <button onclick="moredescrip() " class='more-text'>More Description</button><br> 
+<div class='detailed-des' id="myDiv">Product description:
+    <ul>
                     <ul>
                         <li class=" Available-store">In Stock </li>
                         <li class = " Origin">Product of USA </li>
                         <li class="Available">Available all year around </li>
                         <li class= " Category">Type: Vegetables </li>
-                        <li class= "price">Price "1.25 $/unit" </li>
-            
+                     
+     
                        </ul>
-                     </p>
+        </div>
                     </div>
                     </details >
           <input type="number" id="quantity" name="quantity"
