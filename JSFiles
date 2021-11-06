@@ -1,1 +1,16 @@
 JSFiles
+//function for more description
+function moredescrip(){
+    var more =document.getElementById('myDiv');
+    var mybtn = document.getElementById('more-text')
+    if(myDiv.style.display =='none'){
+myDiv.style.display='inline';
+more-text.style.display=='none';
+mybtn.innerHTML='more-text'
+
+    }else{
+        myDiv.style.display='none';
+        more-text.style.display=='inline';
+        mybtn.innerHTML='more-text'
+    }
+}
